@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $bg-color-yellow;
+}
+
+.footer {
+  .footer-body {
+    height: 90vh;
+  }
+
+  .legal-info {
+    height: 95px;
+    padding: 15px;
+
+    a {
+      color: white;
+      margin: 0px 10px;
+    }
+  }
+
+  .footer-logo {
+    img {
+      max-width: 300px;
+    }
+  }
+}
+
+h1 {
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 72px;
+  letter-spacing: 0em;
+}
+
+img {
+  width: auto;
+  max-height: 90vh;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+}
+
+.bg-black {
+  background-color: $bg-color-black;
+}
+
+.bg-liq {
+  background-repeat: no-repeat;
+  background-position-y: -8vh;
+  background-image: url(../images/bg_liq.png);
+}
+
+.bg-green {
+  background-color: $bg-green;
+}
+
+.bg-line {
+  background-repeat: no-repeat;
+  background-position-y: 40vh;
+  background-image: url(../images/bg3.png);
+}
+
+.bg-yellow {
+  background-color: $bg-color-yellow;
+}
+
+.bg-light-yellow {
+  background-color: $bg-light-yellow;
+}
+
+.bg-light-green {
+  background-color: $bg-light-green;
+}
+
+.navbar {
+  background: transparent;
+
+  .nav-link {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .nav-icon {
+    width: 17px;
+    margin-right: 5px;
+  }
+
+  img {
+    max-height: 400px;
+
+    @media screen and (max-width: 425px) {
+      max-width: 170px;
+    }
+  }
+}
+
+.logo-case {
+  img {
+    max-width: 320px;
+  }
+}
+
+.mat-menu-content {
+  background-color: black;
+  border: 1px solid #81c04b;
+
+  .mat-menu-item {
+    color: white;
+    &:hover {
+      background-color: darken($color: $btn-seccess, $amount: 15);
+      color: white;
+    }
+    &.selected {
+      background-color: $btn-seccess;
+      color: white;
+    }
+  }
+}
+
+.presentation {
+  img {
+    max-height: 739px;
+  }
+}
+
+.text {
+  color: black;
+  padding-top: 100px;
+
+  h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 60px;
+    max-width: 500px;
+  }
+}
+
+.container {
+  max-width: 1286px !important;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  color: aliceblue;
+  background: black;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.card {
+  border-radius: 25px;
+  background-color: transparent;
+  color: black;
+  max-width: 390px;
+
+  .title {
+    h2 {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 60px;
+    }
+  }
+
+  .card-body {
+    height: 370px;
+    border-radius: 25px;
+  }
+
+  img {
+    top: -35px;
+    z-index: 5;
+    position: relative;
+  }
+
+  .card-footer {
+    top: -60px;
+    position: inherit;
+    border-radius: 25px;
+    padding: 25px 0;
+    transform: translateY(-260px);
+    border: none;
+  }
+
+  .content {
+    ul {
+      li {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+.price-case {
+  font-weight: 600;
+  padding: 0 20px;
+  font-size: 18px;
+
+  .price {
+    h4 {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    div {
+      font-size: 20px;
+    }
+  }
+}
+
+.liquid-anim {
+  position: absolute;
+  // z-index: 9999;
+}
