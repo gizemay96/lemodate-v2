@@ -23,6 +23,7 @@ body {
 section{
   height: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
   overscroll-behavior-y: contain;
   scroll-behavior: smooth !important;
   div{

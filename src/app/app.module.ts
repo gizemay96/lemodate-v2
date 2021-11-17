@@ -10,12 +10,41 @@ import { MousewheelDirective } from './directives/mousewheel.directive';
 import { HomeComponent } from './pages/home/home.component';
 import { Section1Component } from './pages/section1/section1.component';
 import {filter} from 'rxjs/operators'
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LottieModule } from 'ngx-lottie';
+import {MatMenuModule} from '@angular/material/menu';
+
+
+export function HttpLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/language/', '.json')
+}
+
+import player from 'lottie-web';
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    HttpClientModule,
+    NgbModule,
+    NgbDropdownModule,
+    MatMenuModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoader,
+        deps: [HttpClient]
+      },
+    }),
+    LottieModule.forRoot({ player: playerFactory }),
   ],
   declarations: [
     AppComponent,

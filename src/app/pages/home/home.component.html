@@ -1,318 +1,255 @@
-<div>
+<div appMousewheel (sectionChanged)="sectionChange()">
     <div class="case" id="case">
-        <section id="section1" style="background-color: antiquewhite;">
+        <section id="section1" class="bg-liq">
             <div>
-                sdafsdfsdfdf
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="">
+                        <img src="../../../assets/images/logo-text.png" class="d-inline-block align-text-top">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i style="color: 'white';" class="fas fa-adjust"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item nav-link active">
+                                <a class="nav-link" href="#"> {{'navbar.about' | translate}} <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item nav-link">
+                                <a class="nav-link">{{'navbar.subscriptions' |
+                                    translate}}</a>
+                            </li>
+                            <li class="nav-item nav-link">
+                                <a class="nav-link" href="#"> {{'navbar.support' | translate}}</a>
+                            </li>
+                            <li class="nav-item nav-link">
+                                <a class="nav-link d-flex align-items-center" mat-button [matMenuTriggerFor]="menu">
+                                    <img class="nav-icon" src="../../../assets/icons/lang.svg" alt="">
+                                    <span>{{language | uppercase }}</span></a>
+                                <mat-menu #menu="matMenu">
+                                    <a [ngClass]="{'selected': language === 'tr'}" class="nav-link" mat-menu-item
+                                        (click)="changeLanguage('tr')">TR</a>
+                                    <a [ngClass]="{'selected': language === 'en'}" class="nav-link" mat-menu-item
+                                        (click)="changeLanguage('en')">EN</a>
+                                </mat-menu>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+
+                <div class="d-flex justify-content-center logo-case col-12 mt-5 ml-5">
+                    <div class="col-lg-7 comp">EKŞİ dENEYİM</div>
+                    <div class="col-lg-5 mt-5 logo d-flex justify-content-center">
+                        <img class="logo-lg" src="../../../assets/images/logo3.png" alt="">
+                    </div>
+                </div>
             </div>
         </section>
     </div>
 
     <div class="case" id="case">
-        <section id="section2" style="background-color: antiquewhite;">
+        <section id="section2" class="bg-yellow bg-line">
             <div>
-                section2
+                <div class="container pt-0 pb-0">
+                    <div class="row">
+                        <div class="text col-lg-6 d-flex align-items-top text-left">
+                            <div class="div">
+                                <div class="circle mt-1 mr-4">1</div>
+                            </div>
+                            <div class="">
+                                <h1>Mükemmel Eşleşme</h1>
+                                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                            </div>
+                        </div>
+                        <div class="img col-lg-6 text-right">
+                            <img class="fadeInRight test-img-op" src="../../../assets/images/view1.png" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
 
     <div class="case">
-        <section id="section3" style="background-color: bisque;">
+        <section id="section3" class="bg-yellow bg-line">
             <div>
-                section 2
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti optio commodi numquam suscipit,
-                cumque
-                aliquid atque sunt tempora, consequuntur autem dolores impedit corporis explicabo vero quae ullam
-                laboriosam
-                nam
-                consequatur!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, sit quia! Modi labore exercitationem,
-                similique
-                cum repudiandae atque nemo voluptates quos soluta excepturi, totam commodi explicabo voluptas, in nam
-                illo!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti magni iste, consequuntur officia
-                perspiciatis
-                repellat at a qui dignissimos nam repellendus amet libero neque vero asperiores, ad, ab soluta!
-                Blanditiis?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, dolorem incidunt. Molestias enim
-                architecto
-                animi? Fugit voluptas eaque praesentium necessitatibus. Soluta nobis dicta architecto commodi magni
-                magnam
-                earum
-                veritatis neque?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias recusandae voluptatum excepturi magnam ab
-                laboriosam amet sapiente repellendus, pariatur velit officiis eius aspernatur modi nesciunt a quasi
-                consequatur
-                accusamus doloremque.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum ipsam omnis aliquid velit quia labore,
-                dolore
-                atque reprehenderit odio dolor non maxime aspernatur deleniti in reiciendis ipsum optio aperiam
-                voluptatem.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat qui debitis dolorem repellendus vitae
-                officiis quam, accusamus dolore impedit doloribus excepturi ipsum, eaque, distinctio delectus itaque
-                aspernatur
-                quia dolores.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam aspernatur, commodi
-                perferendis
-                consequatur iste. Unde repellat placeat earum facere labore itaque quidem magnam dignissimos cupiditate
-                expedita
-                ab, quis molestias!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus delectus temporibus fugit deleniti nulla
-                commodi
-                ut enim alias quia quidem animi deserunt, ab mollitia hic quos impedit nam id amet.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias incidunt quisquam repudiandae voluptas
-                suscipit,
-                inventore, aspernatur iste consectetur deleniti libero saepe? Eaque, ut adipisci rem fugit iure quia
-                porro
-                fugiat!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus maxime, aspernatur rerum similique
-                dicta
-                blanditiis veniam, fugit accusantium adipisci repellat, dolorem error ipsum! Harum, reiciendis? Eos
-                voluptates
-                neque optio quae?
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, sit quia! Modi labore exercitationem,
-                similique
-                cum repudiandae atque nemo voluptates quos soluta excepturi, totam commodi explicabo voluptas, in nam
-                illo!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti magni iste, consequuntur officia
-                perspiciatis
-                repellat at a qui dignissimos nam repellendus amet libero neque vero asperiores, ad, ab soluta!
-                Blanditiis?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, dolorem incidunt. Molestias enim
-                architecto
-                animi? Fugit voluptas eaque praesentium necessitatibus. Soluta nobis dicta architecto commodi magni
-                magnam
-                earum
-                veritatis neque?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias recusandae voluptatum excepturi magnam ab
-                laboriosam amet sapiente repellendus, pariatur velit officiis eius aspernatur modi nesciunt a quasi
-                consequatur
-                accusamus doloremque.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum ipsam omnis aliquid velit quia labore,
-                dolore
-                atque reprehenderit odio dolor non maxime aspernatur deleniti in reiciendis ipsum optio aperiam
-                voluptatem.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat qui debitis dolorem repellendus vitae
-                officiis quam, accusamus dolore impedit doloribus excepturi ipsum, eaque, distinctio delectus itaque
-                aspernatur
-                quia dolores.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam aspernatur, commodi
-                perferendis
-                consequatur iste. Unde repellat placeat earum facere labore itaque quidem magnam dignissimos cupiditate
-                expedita
-                ab, quis molestias!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus delectus temporibus fugit deleniti nulla
-                commodi
-                ut enim alias quia quidem animi deserunt, ab mollitia hic quos impedit nam id amet.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias incidunt quisquam repudiandae voluptas
-                suscipit,
-                inventore, aspernatur iste consectetur deleniti libero saepe? Eaque, ut adipisci rem fugit iure quia
-                porro
-                fugiat!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus maxime, aspernatur rerum similique
-                dicta
-                blanditiis veniam, fugit accusantium adipisci repellat, dolorem error ipsum! Harum, reiciendis? Eos
-                voluptates
-                neque optio quae?
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, sit quia! Modi labore exercitationem,
-                similique
-                cum repudiandae atque nemo voluptates quos soluta excepturi, totam commodi explicabo voluptas, in nam
-                illo!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti magni iste, consequuntur officia
-                perspiciatis
-                repellat at a qui dignissimos nam repellendus amet libero neque vero asperiores, ad, ab soluta!
-                Blanditiis?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, dolorem incidunt. Molestias enim
-                architecto
-                animi? Fugit voluptas eaque praesentium necessitatibus. Soluta nobis dicta architecto commodi magni
-                magnam
-                earum
-                veritatis neque?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias recusandae voluptatum excepturi magnam ab
-                laboriosam amet sapiente repellendus, pariatur velit officiis eius aspernatur modi nesciunt a quasi
-                consequatur
-                accusamus doloremque.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum ipsam omnis aliquid velit quia labore,
-                dolore
-                atque reprehenderit odio dolor non maxime aspernatur deleniti in reiciendis ipsum optio aperiam
-                voluptatem.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat qui debitis dolorem repellendus vitae
-                officiis quam, accusamus dolore impedit doloribus excepturi ipsum, eaque, distinctio delectus itaque
-                aspernatur
-                quia dolores.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam aspernatur, commodi
-                perferendis
-                consequatur iste. Unde repellat placeat earum facere labore itaque quidem magnam dignissimos cupiditate
-                expedita
-                ab, quis molestias!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus delectus temporibus fugit deleniti nulla
-                commodi
-                ut enim alias quia quidem animi deserunt, ab mollitia hic quos impedit nam id amet.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias incidunt quisquam repudiandae voluptas
-                suscipit,
-                inventore, aspernatur iste consectetur deleniti libero saepe? Eaque, ut adipisci rem fugit iure quia
-                porro
-                fugiat!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus maxime, aspernatur rerum similique
-                dicta
-                blanditiis veniam, fugit accusantium adipisci repellat, dolorem error ipsum! Harum, reiciendis? Eos
-                voluptates
-                neque optio quae?
+                <div class="container pt-0 pb-0">
+                    <div class="row reversed">
+                        <div class="img col-lg-6 text-left">
+                            <img id="animated" class="fadeInLeft test-img-op" src="../../../assets/images/view2.png"
+                                alt="">
+                        </div>
+                        <div class="text col-lg-6 d-flex align-items-top text-left mt-5">
+                            <div class="div">
+                                <div class="circle mt-1 mr-4">2</div>
+                            </div>
+                            <div class="">
+                                <h1>Görüntülü Konuşma</h1>
+                                <h3>It is a long established fact that a reader will be distracted by the readable
+                                    content.
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </section>
     </div>
 
     <div class="case" id="case">
-        <section id="section4" style="background-color: antiquewhite;">
+        <section id="section4" class="bg-yellow bg-line">
             <div>
-                section4
+                <div class="container pt-0 pb-0">
+                    <div class="row">
+                        <div class="text col-lg-6 d-flex align-items-top text-left">
+                            <div class="div">
+                                <div class="circle mt-1 mr-4">3</div>
+                            </div>
+                            <div class="">
+                                <h1>Lorem Ipsum </h1>
+                                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                            </div>
+                        </div>
+                        <div class="img col-lg-6 text-right">
+                            <img style="border-radius: 25px;" class="fadeInRight test-img-op"
+                                src="../../../assets/images/view3.png" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
 
     <div class="case">
-        <section id="section5" style="background-color: rgb(122, 253, 236);">
+        <section id="section5" class="bg-black">
             <div>
-                section 5
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti optio commodi numquam suscipit,
-                cumque
-                aliquid atque sunt tempora, consequuntur autem dolores impedit corporis explicabo vero quae ullam
-                laboriosam
-                nam
-                consequatur!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, sit quia! Modi labore exercitationem,
-                similique
-                cum repudiandae atque nemo voluptates quos soluta excepturi, totam commodi explicabo voluptas, in nam
-                illo!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti magni iste, consequuntur officia
-                perspiciatis
-                repellat at a qui dignissimos nam repellendus amet libero neque vero asperiores, ad, ab soluta!
-                Blanditiis?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, dolorem incidunt. Molestias enim
-                architecto
-                animi? Fugit voluptas eaque praesentium necessitatibus. Soluta nobis dicta architecto commodi magni
-                magnam
-                earum
-                veritatis neque?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias recusandae voluptatum excepturi magnam ab
-                laboriosam amet sapiente repellendus, pariatur velit officiis eius aspernatur modi nesciunt a quasi
-                consequatur
-                accusamus doloremque.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum ipsam omnis aliquid velit quia labore,
-                dolore
-                atque reprehenderit odio dolor non maxime aspernatur deleniti in reiciendis ipsum optio aperiam
-                voluptatem.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat qui debitis dolorem repellendus vitae
-                officiis quam, accusamus dolore impedit doloribus excepturi ipsum, eaque, distinctio delectus itaque
-                aspernatur
-                quia dolores.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam aspernatur, commodi
-                perferendis
-                consequatur iste. Unde repellat placeat earum facere labore itaque quidem magnam dignissimos cupiditate
-                expedita
-                ab, quis molestias!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus delectus temporibus fugit deleniti nulla
-                commodi
-                ut enim alias quia quidem animi deserunt, ab mollitia hic quos impedit nam id amet.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias incidunt quisquam repudiandae voluptas
-                suscipit,
-                inventore, aspernatur iste consectetur deleniti libero saepe? Eaque, ut adipisci rem fugit iure quia
-                porro
-                fugiat!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus maxime, aspernatur rerum similique
-                dicta
-                blanditiis veniam, fugit accusantium adipisci repellat, dolorem error ipsum! Harum, reiciendis? Eos
-                voluptates
-                neque optio quae?
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, sit quia! Modi labore exercitationem,
-                similique
-                cum repudiandae atque nemo voluptates quos soluta excepturi, totam commodi explicabo voluptas, in nam
-                illo!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti magni iste, consequuntur officia
-                perspiciatis
-                repellat at a qui dignissimos nam repellendus amet libero neque vero asperiores, ad, ab soluta!
-                Blanditiis?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, dolorem incidunt. Molestias enim
-                architecto
-                animi? Fugit voluptas eaque praesentium necessitatibus. Soluta nobis dicta architecto commodi magni
-                magnam
-                earum
-                veritatis neque?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias recusandae voluptatum excepturi magnam ab
-                laboriosam amet sapiente repellendus, pariatur velit officiis eius aspernatur modi nesciunt a quasi
-                consequatur
-                accusamus doloremque.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum ipsam omnis aliquid velit quia labore,
-                dolore
-                atque reprehenderit odio dolor non maxime aspernatur deleniti in reiciendis ipsum optio aperiam
-                voluptatem.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat qui debitis dolorem repellendus vitae
-                officiis quam, accusamus dolore impedit doloribus excepturi ipsum, eaque, distinctio delectus itaque
-                aspernatur
-                quia dolores.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam aspernatur, commodi
-                perferendis
-                consequatur iste. Unde repellat placeat earum facere labore itaque quidem magnam dignissimos cupiditate
-                expedita
-                ab, quis molestias!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus delectus temporibus fugit deleniti nulla
-                commodi
-                ut enim alias quia quidem animi deserunt, ab mollitia hic quos impedit nam id amet.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias incidunt quisquam repudiandae voluptas
-                suscipit,
-                inventore, aspernatur iste consectetur deleniti libero saepe? Eaque, ut adipisci rem fugit iure quia
-                porro
-                fugiat!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus maxime, aspernatur rerum similique
-                dicta
-                blanditiis veniam, fugit accusantium adipisci repellat, dolorem error ipsum! Harum, reiciendis? Eos
-                voluptates
-                neque optio quae?
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, sit quia! Modi labore exercitationem,
-                similique
-                cum repudiandae atque nemo voluptates quos soluta excepturi, totam commodi explicabo voluptas, in nam
-                illo!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti magni iste, consequuntur officia
-                perspiciatis
-                repellat at a qui dignissimos nam repellendus amet libero neque vero asperiores, ad, ab soluta!
-                Blanditiis?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, dolorem incidunt. Molestias enim
-                architecto
-                animi? Fugit voluptas eaque praesentium necessitatibus. Soluta nobis dicta architecto commodi magni
-                magnam
-                earum
-                veritatis neque?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias recusandae voluptatum excepturi magnam ab
-                laboriosam amet sapiente repellendus, pariatur velit officiis eius aspernatur modi nesciunt a quasi
-                consequatur
-                accusamus doloremque.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum ipsam omnis aliquid velit quia labore,
-                dolore
-                atque reprehenderit odio dolor non maxime aspernatur deleniti in reiciendis ipsum optio aperiam
-                voluptatem.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat qui debitis dolorem repellendus vitae
-                officiis quam, accusamus dolore impedit doloribus excepturi ipsum, eaque, distinctio delectus itaque
-                aspernatur
-                quia dolores.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam aspernatur, commodi
-                perferendis
-                consequatur iste. Unde repellat placeat earum facere labore itaque quidem magnam dignissimos cupiditate
-                expedita
-                ab, quis molestias!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus delectus temporibus fugit deleniti nulla
-                commodi
-                ut enim alias quia quidem animi deserunt, ab mollitia hic quos impedit nam id amet.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias incidunt quisquam repudiandae voluptas
-                suscipit,
-                inventore, aspernatur iste consectetur deleniti libero saepe? Eaque, ut adipisci rem fugit iure quia
-                porro
-                fugiat!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus maxime, aspernatur rerum similique
-                dicta
-                blanditiis veniam, fugit accusantium adipisci repellat, dolorem error ipsum! Harum, reiciendis? Eos
-                voluptates
-                neque optio quae?
+                <div class="container">
+                    <div class="cards row justify-content-between">
+
+                        <div class="card col-lg-4">
+                            <div class="card-body bg-light-yellow cardUpAnime">
+                                <div class="title">
+                                    <h2 class="card-title text-center">Standart Üyelik</h2>
+                                </div>
+                                <div class="content p-4 pt-5">
+                                    <ul>
+                                        <li>Anlık sohbete geçmeden önce en az 2 soru yanıtlaman gerekir.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="openAnimation text-center">
+                                <img class="cardLogoAnim" src="../../../assets/images/circle_logo.png" alt="">
+                                <div class="card-footer bg-light-yellow pt-5">
+                                    <div class="d-flex align-items-center justify-content-center price-case">
+                                        <div class="price col-12">
+                                            <h3>( Ücretsiz ) </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card col-lg-4">
+                            <div class="card-body bg-light-green cardUpAnime">
+                                <div class="title">
+                                    <h2 class="card-title text-center">Gelişmiş Üyelik</h2>
+                                </div>
+                                <div class="content p-2 pt-1">
+                                    <ul>
+                                        <li>Fotoğrafların chat ekranı açılmadan gösterilecek şekilde ayarlanabilir.
+                                        </li>
+                                        <li>Sesli görüşme seçeneği aktif edilir.</li>
+                                        <li>Soruları geç, chat'e geçelim talebi gönderme.</li>
+                                        <li>Görünmez moduna geçilebilir.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="openAnimation text-center">
+                                <img class="cardLogoAnim" src="../../../assets/images/circle_logo.png" alt="">
+                                <div class="card-footer bg-light-green">
+                                    <div class="d-flex align-items-center justify-content-center price-case">
+                                        <div class="price col-4">
+                                            <h4>Haftalık</h4>
+                                            <div>9.99</div>
+                                        </div>
+                                        <div class="price col-4">
+                                            <h4>Aylık</h4>
+                                            <div>29.99</div>
+                                        </div>
+                                        <div class="price col-4">
+                                            <h4>Yıllık</h4>
+                                            <div>249.99</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card col-lg-4">
+                            <div class="card-body bg-green cardUpAnime">
+                                <div class="title">
+                                    <h2 class="card-title text-center">Aşırı Gelişmiş Üyelik</h2>
+                                </div>
+                                <div class="content p-4">
+                                    <ul>
+                                        <li>Gelişmiş Üyelikteki Bütün Özelliklere Ek,</li>
+                                        <li>Görüntülü görüşme seçeneği aktif edilir.</li>
+                                        <li>Chat ekranında fotoğraf paylaşma seçeceği aktif edilir.</li>
+                                        <li>Lokasyon değiştirebilme özelliği aktif edilir. </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="openAnimation text-center">
+                                <img class="cardLogoAnim" src="../../../assets/images/circle_logo.png" alt="">
+                                <div class="card-footer bg-green">
+                                    <div class="d-flex align-items-center justify-content-center price-case">
+                                        <div class="price col-4">
+                                            <h4>Haftalık</h4>
+                                            <div>13.99</div>
+                                        </div>
+                                        <div class="price col-4">
+                                            <h4>Aylık</h4>
+                                            <div>42.99</div>
+                                        </div>
+                                        <div class="price col-4">
+                                            <h4>Yıllık</h4>
+                                            <div>379.99</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </section>
     </div>
+
+    <div class="case" id="case">
+        <section id="section6">
+            <div>
+                <div class="d-flex justify-content-center align-items-center footer-body">
+                    <div class="">
+                         <div class="footer-logo"><img src="../../../assets/images/footer_logo.png" alt=""></div>
+                         <div class="frame text-center mt-4"><img src="../../../assets/images/Frame.png" alt=""></div>
+                         <div class="frame text-center mt-4" style="cursor: pointer;"><img
+                                   src="../../../assets/images/googleplay.png" alt="">
+                         </div>
+                    </div>
+               </div>
+               <div class="legal-info d-flex justify-content-center align-items-center bg-black">
+                    <a href="">KVK ve Gizlilik Politikası</a>
+                    <a href="">Kullanım Koşulları</a>
+                    <a href="">© 2021 Lorem Grup, Tüm Hakları Saklıdır.</a>
+               </div>
+              </div>
+        </section>
+    </div>
+
 </div>

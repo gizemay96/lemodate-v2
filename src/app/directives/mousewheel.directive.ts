@@ -14,11 +14,12 @@ export class MousewheelDirective {
     { url: 'section3' },
     { url: 'section4' },
     { url: 'section5' },
+    { url: 'section6' },
   ]
 
   @Output() mouseWheelUp = new EventEmitter();
   @Output() mouseWheelDown = new EventEmitter();
-  @Output() itembottom = new EventEmitter();
+  @Output() sectionChanged = new EventEmitter();
 
   @HostListener('mousewheel', ['$event']) onMouseWheelChrome(event: any) {
     this.mouseWheelFunc(event);
@@ -130,6 +131,7 @@ export class MousewheelDirective {
         this.mouseWheelDown.emit(event);
         this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
       }
+      this.sectionChanged.emit();
       active?.scroll(0, 0);
     }, 260);
 
