@@ -41,16 +41,13 @@ export class MousewheelDirective {
   constructor(private router: Router) {
 
     document.addEventListener('touchmove', function (e) {
-      console.log(e)
       const active = document.getElementById(window.location.hash.split('#')[1]) as any;
-      console.log(active.scrollHeight , window.scrollY)
-      active?.scroll(0, 300);
-      // e.preventDefault();
+      active?.scroll(0, 0);
     });
 
     const { swipeArea, updateOptions } = SwipeEventListener({
       swipeArea: document.querySelector('body') as any,
-      swipeSensitivity: 15,
+      swipeSensitivity: 100,
       listenForTouchEvents: true
     });
 
@@ -119,7 +116,8 @@ export class MousewheelDirective {
     var event = window.event || event; // old IE support
     var delta = swipeDelta ? swipeDelta : Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
 
-   // active.style.touchAction = 'auto';
+    setTimeout(() => {
+      // active.style.touchAction = 'auto';
       if (delta > 0 && atSectionTop) {
         this.mouseWheelUp.emit(event);
         this.sectionChanged.emit();
@@ -133,6 +131,7 @@ export class MousewheelDirective {
         this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
       }
 
+    }, 800);
 
     // for IE
     event.returnValue = false;
