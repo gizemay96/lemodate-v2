@@ -4,24 +4,23 @@
 @import "./assets//theme/root.scss";
 @import "./assets/theme/media.scss";
 
+
 html,
 body {
   scroll-behavior: smooth !important;
-  overflow-y: hidden !important;
+  overflow: hidden !important;
   padding: 0;
   margin: 0;
   width: 100vw;
-
+  touch-action: none;
 }
 
 
 section{
   height: 100vh;
-  overscroll-behavior-y: contain;
-  scroll-behavior: smooth !important;
   .case{
     padding: 15px;
     height: 100%;
-    overflow: hidden;
+    overflow: hidden !important;
   }
 }
