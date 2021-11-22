@@ -15,7 +15,9 @@ export class MousewheelDirective {
     { url: 'section4' },
     { url: 'section5' },
     { url: 'section6' },
-  ]
+  ];
+  timer: any = null;
+  test: any = true;
 
   @Output() mouseWheelUp = new EventEmitter();
   @Output() mouseWheelDown = new EventEmitter();
@@ -33,13 +35,28 @@ export class MousewheelDirective {
     this.mouseWheelFunc(event);
   }
 
+  @HostListener('touchmove', ['$event']) touchEvent(event: any) {
+    this.timer = setInterval(() => {
+      if (this.test === false) {
+        clearInterval(this.timer)
+      } else {
+        console.log('working')
+        this.test = false;
+      }
+    }, 1000);
+    event.preventDefault();
+  }
+
+  @HostListener('touchend', ['$event']) end(event: any) {
+    setTimeout(() => {
+      this.test = true;
+    }, 950);
+  }
+
+
+
 
   constructor(private router: Router) {
-
-    // document.addEventListener('touchmove', function (e) {
-    //   console.log(document)
-    //   e.preventDefault();
-    // }, { passive: false });
 
     const { swipeArea, updateOptions } = SwipeEventListener({
       swipeArea: document.querySelector('body') as any,
@@ -103,7 +120,6 @@ export class MousewheelDirective {
   }
 
 
-
   mouseWheelFunc(event: any, swipeDelta?: any) {
     this.activeInd = this.sections.findIndex(section => section.url === window.location.hash.split('#')[1]);
     const active = document.getElementById(window.location.hash.split('#')[1]) as any;
@@ -132,7 +148,6 @@ export class MousewheelDirective {
           this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
         }, 100);
       }
-
     }, 800);
 
     // for IE
