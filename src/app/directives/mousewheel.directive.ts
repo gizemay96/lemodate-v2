@@ -34,15 +34,8 @@ export class MousewheelDirective {
   }
 
   // @HostListener('touchstart', ['$event']) onTouchStart(event: any) {
-  //   const active = document.getElementById(window.location.hash.split('#')[1]) as any;
-  //   const atSectionTop = active && active.scrollTop === 0;
-  //   const atSectionBottom = active && (active.offsetHeight + active.scrollTop >= active.scrollHeight);
-
-  //   if (atSectionTop && atSectionBottom) {
-  //     active.style.touchAction = 'none'
-  //   } else {
-  //     active.style.touchAction = 'pan-y'
-  //   }
+  //   const active = document.querySelector('body') as any;
+  //   active.style.touchAction = 'none'
   // }
 
   constructor(private router: Router) {
@@ -117,9 +110,8 @@ export class MousewheelDirective {
     const atSectionBottom = active && (active.offsetHeight + active.scrollTop >= active.scrollHeight);
     var event = window.event || event; // old IE support
     var delta = swipeDelta ? swipeDelta : Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
-    
+
     setTimeout(() => {
-      
       // active.style.touchAction = 'auto';
       if (delta > 0 && atSectionTop) {
         this.mouseWheelUp.emit(event);
@@ -133,7 +125,7 @@ export class MousewheelDirective {
         this.mouseWheelDown.emit(event);
         this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
       }
-      
+
     }, 500);
 
     // for IE
