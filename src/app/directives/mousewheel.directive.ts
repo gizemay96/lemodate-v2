@@ -43,7 +43,8 @@ export class MousewheelDirective {
     document.addEventListener('touchmove', function (e) {
       console.log(e)
       const active = document.getElementById(window.location.hash.split('#')[1]) as any;
-      active.scrollTo(0, 0)
+      console.log(active.scrollHeight , window.scrollY)
+      active?.scroll(0, 0);
       // e.preventDefault();
     });
 
