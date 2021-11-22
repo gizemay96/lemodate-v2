@@ -124,13 +124,23 @@ export class MousewheelDirective {
         this.mouseWheelUp.emit(event);
         this.sectionChanged.emit();
         const newInd = this.activeInd === 0 ? 0 : this.activeInd - 1;
-        this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
+        const test = document.getElementById(this.sections[newInd].url) as any;
+        test.scrollIntoView();
+        history.pushState(null, '', `#${this.sections[newInd].url}`);
+        // setTimeout(() => {
+        //   this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
+        // }, 100);
 
       } else if (delta < 0 && atSectionBottom) {
         const newInd = this.activeInd + 1 === this.sections.length ? 0 : this.activeInd + 1;
         this.sectionChanged.emit();
         this.mouseWheelDown.emit(event);
-        this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
+        const test = document.getElementById(this.sections[newInd].url) as any;
+        test.scrollIntoView();
+        history.pushState(null, '', `#${this.sections[newInd].url}`);
+        // setTimeout(() => {
+        //   this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
+        // }, 100);
       }
 
     }, 800);
