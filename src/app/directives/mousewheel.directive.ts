@@ -43,14 +43,14 @@ export class MousewheelDirective {
         console.log('working')
         this.test = false;
       }
-    }, 1000);
+    }, 400);
     event.preventDefault();
   }
 
   @HostListener('touchend', ['$event']) end(event: any) {
     setTimeout(() => {
       this.test = true;
-    }, 950);
+    }, 450);
   }
 
 
