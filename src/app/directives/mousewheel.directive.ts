@@ -33,13 +33,6 @@ export class MousewheelDirective {
     this.mouseWheelFunc(event);
   }
 
-  // @HostListener('touchstart', ['$event']) onTouchStart(event: any) {
-  //   const active = document.querySelector('body') as any;
-  //   active.style.touchAction = 'none'
-  // }
-  handleTouchMove(e: any) {
-    e.preventDefault();
-  }
 
   constructor(private router: Router) {
 
@@ -124,23 +117,19 @@ export class MousewheelDirective {
         this.mouseWheelUp.emit(event);
         this.sectionChanged.emit();
         const newInd = this.activeInd === 0 ? 0 : this.activeInd - 1;
-        const test = document.getElementById(this.sections[newInd].url) as any;
-        test.scrollIntoView();
-        history.pushState(null, '', `#${this.sections[newInd].url}`);
-        // setTimeout(() => {
-        //   this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
-        // }, 100);
+
+        setTimeout(() => {
+          this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
+        }, 100);
 
       } else if (delta < 0 && atSectionBottom) {
         const newInd = this.activeInd + 1 === this.sections.length ? 0 : this.activeInd + 1;
         this.sectionChanged.emit();
         this.mouseWheelDown.emit(event);
-        const test = document.getElementById(this.sections[newInd].url) as any;
-        test.scrollIntoView();
-        history.pushState(null, '', `#${this.sections[newInd].url}`);
-        // setTimeout(() => {
-        //   this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
-        // }, 100);
+
+        setTimeout(() => {
+          this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
+        }, 100);
       }
 
     }, 800);
