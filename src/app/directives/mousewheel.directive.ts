@@ -44,7 +44,7 @@ export class MousewheelDirective {
       console.log(e)
       const active = document.getElementById(window.location.hash.split('#')[1]) as any;
       console.log(active.scrollHeight , window.scrollY)
-      active?.scroll(0, 0);
+      active?.scroll(0, 300);
       // e.preventDefault();
     });
 
@@ -119,8 +119,7 @@ export class MousewheelDirective {
     var event = window.event || event; // old IE support
     var delta = swipeDelta ? swipeDelta : Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
 
-    setTimeout(() => {
-      // active.style.touchAction = 'auto';
+   // active.style.touchAction = 'auto';
       if (delta > 0 && atSectionTop) {
         this.mouseWheelUp.emit(event);
         this.sectionChanged.emit();
@@ -134,7 +133,6 @@ export class MousewheelDirective {
         this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
       }
 
-    }, 500);
 
     // for IE
     event.returnValue = false;
