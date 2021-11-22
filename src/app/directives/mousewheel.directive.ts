@@ -33,17 +33,17 @@ export class MousewheelDirective {
     this.mouseWheelFunc(event);
   }
 
-  @HostListener('touchstart', ['$event']) onTouchStart(event: any) {
-    const active = document.getElementById(window.location.hash.split('#')[1]) as any;
-    const atSectionTop = active && active.scrollTop === 0;
-    const atSectionBottom = active && (active.offsetHeight + active.scrollTop >= active.scrollHeight);
+  // @HostListener('touchstart', ['$event']) onTouchStart(event: any) {
+  //   const active = document.getElementById(window.location.hash.split('#')[1]) as any;
+  //   const atSectionTop = active && active.scrollTop === 0;
+  //   const atSectionBottom = active && (active.offsetHeight + active.scrollTop >= active.scrollHeight);
 
-    if (atSectionTop && atSectionBottom) {
-      active.style.touchAction = 'none'
-    } else {
-      active.style.touchAction = 'pan-y'
-    }
-  }
+  //   if (atSectionTop && atSectionBottom) {
+  //     active.style.touchAction = 'none'
+  //   } else {
+  //     active.style.touchAction = 'pan-y'
+  //   }
+  // }
 
   constructor(private router: Router) {
 
@@ -120,20 +120,21 @@ export class MousewheelDirective {
     
     setTimeout(() => {
       
-      active.style.touchAction = 'auto';
+      // active.style.touchAction = 'auto';
       if (delta > 0 && atSectionTop) {
         this.mouseWheelUp.emit(event);
+        this.sectionChanged.emit();
         const newInd = this.activeInd === 0 ? 0 : this.activeInd - 1;
         this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
 
       } else if (delta < 0 && atSectionBottom) {
         const newInd = this.activeInd + 1 === this.sections.length ? 0 : this.activeInd + 1;
+        this.sectionChanged.emit();
         this.mouseWheelDown.emit(event);
         this.router.navigate(['home/'], { fragment: this.sections[newInd].url });
       }
-      this.sectionChanged.emit();
-      active?.scroll(0, 0);
-    }, 260);
+      
+    }, 500);
 
     // for IE
     event.returnValue = false;
