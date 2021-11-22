@@ -14,17 +14,14 @@ body {
 
 }
 
-.case {
+
+section{
   height: 100vh;
   overscroll-behavior-y: contain;
   scroll-behavior: smooth !important;
-}
-
-section{
-  height: 100%;
-  overscroll-behavior-y: contain;
-  scroll-behavior: smooth !important;
-  div{
+  .case{
     padding: 15px;
+    height: 100%;
+    overflow: hidden;
   }
 }

@@ -1,255 +1,253 @@
 <div appMousewheel (sectionChanged)="sectionChange()">
-    <div class="case" id="case">
-        <section id="section1" class="bg-liq">
-            <div>
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="">
-                        <img src="../../../assets/images/logo-text.png" class="d-inline-block align-text-top">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i style="color: 'white';" class="fas fa-adjust"></i>
-                    </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item nav-link active">
-                                <a class="nav-link" href="#"> {{'navbar.about' | translate}} <span
-                                        class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item nav-link">
-                                <a class="nav-link">{{'navbar.subscriptions' |
-                                    translate}}</a>
-                            </li>
-                            <li class="nav-item nav-link">
-                                <a class="nav-link" href="#"> {{'navbar.support' | translate}}</a>
-                            </li>
-                            <li class="nav-item nav-link">
-                                <a class="nav-link d-flex align-items-center" mat-button [matMenuTriggerFor]="menu">
-                                    <img class="nav-icon" src="../../../assets/icons/lang.svg" alt="">
-                                    <span>{{language | uppercase }}</span></a>
-                                <mat-menu #menu="matMenu">
-                                    <a [ngClass]="{'selected': language === 'tr'}" class="nav-link" mat-menu-item
-                                        (click)="changeLanguage('tr')">TR</a>
-                                    <a [ngClass]="{'selected': language === 'en'}" class="nav-link" mat-menu-item
-                                        (click)="changeLanguage('en')">EN</a>
-                                </mat-menu>
-                            </li>
-                        </ul>
+    <section id="section1" class="bg-liq">
+        <div>
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="">
+                    <img src="../../../assets/images/logo-text.png" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i style="color: 'white';" class="fas fa-adjust"></i>
+                </button>
 
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item nav-link active">
+                            <a class="nav-link" href="#"> {{'navbar.about' | translate}} <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item nav-link">
+                            <a class="nav-link">{{'navbar.subscriptions' |
+                                translate}}</a>
+                        </li>
+                        <li class="nav-item nav-link">
+                            <a class="nav-link" href="#"> {{'navbar.support' | translate}}</a>
+                        </li>
+                        <li class="nav-item nav-link">
+                            <a class="nav-link d-flex align-items-center" mat-button [matMenuTriggerFor]="menu">
+                                <img class="nav-icon" src="../../../assets/icons/lang.svg" alt="">
+                                <span>{{language | uppercase }}</span></a>
+                            <mat-menu #menu="matMenu">
+                                <a [ngClass]="{'selected': language === 'tr'}" class="nav-link" mat-menu-item
+                                    (click)="changeLanguage('tr')">TR</a>
+                                <a [ngClass]="{'selected': language === 'en'}" class="nav-link" mat-menu-item
+                                    (click)="changeLanguage('en')">EN</a>
+                            </mat-menu>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <div class="d-flex justify-content-center logo-case col-12 mt-5 ml-5">
+                <div class="col-lg-7 comp">EKŞİ dENEYİM</div>
+                <div class="col-lg-5 mt-5 logo d-flex justify-content-center">
+                    <img class="logo-lg" src="../../../assets/images/logo3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="section2" class="bg-yellow bg-line">
+        <div class="case">
+            <div class="container pt-0 pb-0">
+                <div class="row">
+                    <div class="text col-lg-6 d-flex align-items-top text-left">
+                        <div class="div">
+                            <div class="circle mt-1 mr-4">1</div>
+                        </div>
+                        <div class="">
+                            <h1>Mükemmel Eşleşme</h1>
+                            <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                        </div>
                     </div>
-                </nav>
-
-                <div class="d-flex justify-content-center logo-case col-12 mt-5 ml-5">
-                    <div class="col-lg-7 comp">EKŞİ dENEYİM</div>
-                    <div class="col-lg-5 mt-5 logo d-flex justify-content-center">
-                        <img class="logo-lg" src="../../../assets/images/logo3.png" alt="">
+                    <div class="img col-lg-6 text-right">
+                        <img class="fadeInRight opacity-none" src="../../../assets/images/view1.png" alt="">
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <div class="case" id="case">
-        <section id="section2" class="bg-yellow bg-line">
-            <div>
-                <div class="container pt-0 pb-0">
-                    <div class="row">
-                        <div class="text col-lg-6 d-flex align-items-top text-left">
-                            <div class="div">
-                                <div class="circle mt-1 mr-4">1</div>
-                            </div>
-                            <div class="">
-                                <h1>Mükemmel Eşleşme</h1>
-                                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-                            </div>
-                        </div>
-                        <div class="img col-lg-6 text-right">
-                            <img class="fadeInRight test-img-op" src="../../../assets/images/view1.png" alt="">
-                        </div>
+
+
+    <section id="section3" class="bg-yellow bg-line">
+        <div class="case">
+            <div class="container pt-0 pb-0">
+                <div class="row reversed">
+                    <div class="img col-lg-6 text-left">
+                        <img id="animated" class="fadeInLeft opacity-none" src="../../../assets/images/view2.png" alt="">
                     </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div class="case">
-        <section id="section3" class="bg-yellow bg-line">
-            <div>
-                <div class="container pt-0 pb-0">
-                    <div class="row reversed">
-                        <div class="img col-lg-6 text-left">
-                            <img id="animated" class="fadeInLeft test-img-op" src="../../../assets/images/view2.png"
-                                alt="">
+                    <div class="text col-lg-6 d-flex align-items-top text-left mt-5">
+                        <div class="div">
+                            <div class="circle mt-1 mr-4">2</div>
                         </div>
-                        <div class="text col-lg-6 d-flex align-items-top text-left mt-5">
-                            <div class="div">
-                                <div class="circle mt-1 mr-4">2</div>
-                            </div>
-                            <div class="">
-                                <h1>Görüntülü Konuşma</h1>
-                                <h3>It is a long established fact that a reader will be distracted by the readable
-                                    content.
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-    </div>
-
-    <div class="case" id="case">
-        <section id="section4" class="bg-yellow bg-line">
-            <div>
-                <div class="container pt-0 pb-0">
-                    <div class="row">
-                        <div class="text col-lg-6 d-flex align-items-top text-left">
-                            <div class="div">
-                                <div class="circle mt-1 mr-4">3</div>
-                            </div>
-                            <div class="">
-                                <h1>Lorem Ipsum </h1>
-                                <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-                            </div>
-                        </div>
-                        <div class="img col-lg-6 text-right">
-                            <img style="border-radius: 25px;" class="fadeInRight test-img-op"
-                                src="../../../assets/images/view3.png" alt="">
+                        <div class="">
+                            <h1>Görüntülü Konuşma</h1>
+                            <h3>It is a long established fact that a reader will be distracted by the readable
+                                content.
+                            </h3>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
 
-    <div class="case">
-        <section id="section5" class="bg-black">
-            <div>
-                <div class="container">
-                    <div class="cards row justify-content-between">
+    </section>
 
-                        <div class="card col-lg-4">
-                            <div class="card-body bg-light-yellow cardUpAnime">
-                                <div class="title">
-                                    <h2 class="card-title text-center">Standart Üyelik</h2>
-                                </div>
-                                <div class="content p-4 pt-5">
-                                    <ul>
-                                        <li>Anlık sohbete geçmeden önce en az 2 soru yanıtlaman gerekir.</li>
-                                    </ul>
-                                </div>
+
+    <section id="section4" class="bg-yellow bg-line">
+        <div class="case">
+            <div class="container pt-0 pb-0">
+                <div class="row">
+                    <div class="text col-lg-6 d-flex align-items-top text-left">
+                        <div class="div">
+                            <div class="circle mt-1 mr-4">3</div>
+                        </div>
+                        <div class="">
+                            <h1>Lorem Ipsum </h1>
+                            <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+                        </div>
+                    </div>
+                    <div class="img col-lg-6 text-right">
+                        <img style="border-radius: 25px;" class="fadeInRight opacity-none"
+                            src="../../../assets/images/view3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="section5" class="bg-black">
+        <div class="case">
+            <div class="container">
+                <div class="cards row justify-content-between">
+
+                    <div class="card col-lg-4">
+                        <div class="card-body bg-light-yellow cardUpAnime">
+                            <div class="title">
+                                <h2 class="card-title text-center">Standart Üyelik</h2>
                             </div>
-                            <div class="openAnimation text-center">
-                                <img class="cardLogoAnim" src="../../../assets/images/circle_logo.png" alt="">
-                                <div class="card-footer bg-light-yellow pt-5">
-                                    <div class="d-flex align-items-center justify-content-center price-case">
-                                        <div class="price col-12">
-                                            <h3>( Ücretsiz ) </h3>
-                                        </div>
+                            <div class="content p-4 pt-5">
+                                <ul>
+                                    <li>Anlık sohbete geçmeden önce en az 2 soru yanıtlaman gerekir.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="openAnimation text-center">
+                            <img class="cardLogoAnim" src="../../../assets/images/circle_logo.png" alt="">
+                            <div class="card-footer bg-light-yellow pt-5">
+                                <div class="d-flex align-items-center justify-content-center price-case">
+                                    <div class="price col-12">
+                                        <h3>( Ücretsiz ) </h3>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="card col-lg-4">
-                            <div class="card-body bg-light-green cardUpAnime">
-                                <div class="title">
-                                    <h2 class="card-title text-center">Gelişmiş Üyelik</h2>
-                                </div>
-                                <div class="content p-2 pt-1">
-                                    <ul>
-                                        <li>Fotoğrafların chat ekranı açılmadan gösterilecek şekilde ayarlanabilir.
-                                        </li>
-                                        <li>Sesli görüşme seçeneği aktif edilir.</li>
-                                        <li>Soruları geç, chat'e geçelim talebi gönderme.</li>
-                                        <li>Görünmez moduna geçilebilir.</li>
-                                    </ul>
-                                </div>
+                    <div class="card col-lg-4">
+                        <div class="card-body bg-light-green cardUpAnime">
+                            <div class="title">
+                                <h2 class="card-title text-center">Gelişmiş Üyelik</h2>
                             </div>
-                            <div class="openAnimation text-center">
-                                <img class="cardLogoAnim" src="../../../assets/images/circle_logo.png" alt="">
-                                <div class="card-footer bg-light-green">
-                                    <div class="d-flex align-items-center justify-content-center price-case">
-                                        <div class="price col-4">
-                                            <h4>Haftalık</h4>
-                                            <div>9.99</div>
-                                        </div>
-                                        <div class="price col-4">
-                                            <h4>Aylık</h4>
-                                            <div>29.99</div>
-                                        </div>
-                                        <div class="price col-4">
-                                            <h4>Yıllık</h4>
-                                            <div>249.99</div>
-                                        </div>
+                            <div class="content p-2 pt-1">
+                                <ul>
+                                    <li>Fotoğrafların chat ekranı açılmadan gösterilecek şekilde ayarlanabilir.
+                                    </li>
+                                    <li>Sesli görüşme seçeneği aktif edilir.</li>
+                                    <li>Soruları geç, chat'e geçelim talebi gönderme.</li>
+                                    <li>Görünmez moduna geçilebilir.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="openAnimation text-center">
+                            <img class="cardLogoAnim" src="../../../assets/images/circle_logo.png" alt="">
+                            <div class="card-footer bg-light-green">
+                                <div class="d-flex align-items-center justify-content-center price-case">
+                                    <div class="price col-4">
+                                        <h4>Haftalık</h4>
+                                        <div>9.99</div>
+                                    </div>
+                                    <div class="price col-4">
+                                        <h4>Aylık</h4>
+                                        <div>29.99</div>
+                                    </div>
+                                    <div class="price col-4">
+                                        <h4>Yıllık</h4>
+                                        <div>249.99</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="card col-lg-4">
-                            <div class="card-body bg-green cardUpAnime">
-                                <div class="title">
-                                    <h2 class="card-title text-center">Aşırı Gelişmiş Üyelik</h2>
-                                </div>
-                                <div class="content p-4">
-                                    <ul>
-                                        <li>Gelişmiş Üyelikteki Bütün Özelliklere Ek,</li>
-                                        <li>Görüntülü görüşme seçeneği aktif edilir.</li>
-                                        <li>Chat ekranında fotoğraf paylaşma seçeceği aktif edilir.</li>
-                                        <li>Lokasyon değiştirebilme özelliği aktif edilir. </li>
-                                    </ul>
-                                </div>
+                    <div class="card col-lg-4">
+                        <div class="card-body bg-green cardUpAnime">
+                            <div class="title">
+                                <h2 class="card-title text-center">Aşırı Gelişmiş Üyelik</h2>
                             </div>
-                            <div class="openAnimation text-center">
-                                <img class="cardLogoAnim" src="../../../assets/images/circle_logo.png" alt="">
-                                <div class="card-footer bg-green">
-                                    <div class="d-flex align-items-center justify-content-center price-case">
-                                        <div class="price col-4">
-                                            <h4>Haftalık</h4>
-                                            <div>13.99</div>
-                                        </div>
-                                        <div class="price col-4">
-                                            <h4>Aylık</h4>
-                                            <div>42.99</div>
-                                        </div>
-                                        <div class="price col-4">
-                                            <h4>Yıllık</h4>
-                                            <div>379.99</div>
-                                        </div>
+                            <div class="content p-4">
+                                <ul>
+                                    <li>Gelişmiş Üyelikteki Bütün Özelliklere Ek,</li>
+                                    <li>Görüntülü görüşme seçeneği aktif edilir.</li>
+                                    <li>Chat ekranında fotoğraf paylaşma seçeceği aktif edilir.</li>
+                                    <li>Lokasyon değiştirebilme özelliği aktif edilir. </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="openAnimation text-center">
+                            <img class="cardLogoAnim" src="../../../assets/images/circle_logo.png" alt="">
+                            <div class="card-footer bg-green">
+                                <div class="d-flex align-items-center justify-content-center price-case">
+                                    <div class="price col-4">
+                                        <h4>Haftalık</h4>
+                                        <div>13.99</div>
+                                    </div>
+                                    <div class="price col-4">
+                                        <h4>Aylık</h4>
+                                        <div>42.99</div>
+                                    </div>
+                                    <div class="price col-4">
+                                        <h4>Yıllık</h4>
+                                        <div>379.99</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="section6">
+        <div class="case">
+            <div class="d-flex justify-content-center align-items-center footer-body">
+                <div class="">
+                    <div class="footer-logo"><img src="../../../assets/images/footer_logo.png" alt=""></div>
+                    <div class="frame text-center mt-4"><img src="../../../assets/images/Frame.png" alt=""></div>
+                    <div class="frame text-center mt-4" style="cursor: pointer;"><img
+                            src="../../../assets/images/googleplay.png" alt="">
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+            <div class="legal-info d-flex justify-content-center align-items-center bg-black">
+                <a href="">KVK ve Gizlilik Politikası</a>
+                <a href="">Kullanım Koşulları</a>
+                <a href="">© 2021 Lorem Grup, Tüm Hakları Saklıdır.</a>
+            </div>
+        </div>
+    </section>
 
-    <div class="case" id="case">
-        <section id="section6">
-            <div>
-                <div class="d-flex justify-content-center align-items-center footer-body">
-                    <div class="">
-                         <div class="footer-logo"><img src="../../../assets/images/footer_logo.png" alt=""></div>
-                         <div class="frame text-center mt-4"><img src="../../../assets/images/Frame.png" alt=""></div>
-                         <div class="frame text-center mt-4" style="cursor: pointer;"><img
-                                   src="../../../assets/images/googleplay.png" alt="">
-                         </div>
-                    </div>
-               </div>
-               <div class="legal-info d-flex justify-content-center align-items-center bg-black">
-                    <a href="">KVK ve Gizlilik Politikası</a>
-                    <a href="">Kullanım Koşulları</a>
-                    <a href="">© 2021 Lorem Grup, Tüm Hakları Saklıdır.</a>
-               </div>
-              </div>
-        </section>
-    </div>
 
 </div>

@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import anime from 'animejs';
+import anime from 'animejs'
 import { AnimationItem } from 'lottie-web';
 import { AnimationOptions } from 'ngx-lottie';
 
@@ -115,10 +115,11 @@ export class HomeComponent implements OnInit {
 
 
   animationToggle() {
-    if (window.location.hash === '#about' || window.location.hash === '#about/3') {
+    console.log(window.location)
+    if (window.location.hash === '#section2' || window.location.hash === '#section4') {
       this.imgRightAnim.restart();
     }
-    if (window.location.hash === ('#about/2')) {
+    if (window.location.hash === ('#section3')) {
       this.imgLeftAnim.restart();
     }
 
