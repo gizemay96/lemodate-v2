@@ -47,7 +47,7 @@ export class MousewheelDirective {
 
     const { swipeArea, updateOptions } = SwipeEventListener({
       swipeArea: document.querySelector('body') as any,
-      swipeSensitivity: 100,
+      swipeSensitivity: 1,
       listenForTouchEvents: true
     });
 
