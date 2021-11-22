@@ -43,17 +43,9 @@ export class MousewheelDirective {
 
   constructor(private router: Router) {
 
-    // document.addEventListener('touchmove', function (e) {
-    //   console.log(e)
-    //   const active = document.getElementById(window.location.hash.split('#')[1]) as any;
-    //   active?.scroll(0, 0);
-    // });
-
-    
-
-    document.addEventListener('touchmove', this.handleTouchMove, false);
-
-    document.removeEventListener('touchmove', this.handleTouchMove);
+    document.addEventListener('touchmove', function (e) {
+      e.preventDefault();
+    }, { passive: false });
 
     const { swipeArea, updateOptions } = SwipeEventListener({
       swipeArea: document.querySelector('body') as any,
