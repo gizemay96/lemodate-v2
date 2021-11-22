@@ -41,6 +41,7 @@ export class MousewheelDirective {
   constructor(private router: Router) {
 
     document.addEventListener('touchmove', function (e) {
+      console.log(e)
       const active = document.getElementById(window.location.hash.split('#')[1]) as any;
       active?.scroll(0, 0);
     });
